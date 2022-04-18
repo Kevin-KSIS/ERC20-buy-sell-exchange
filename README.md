@@ -8,13 +8,20 @@ The goal of this challenge is to create your own ERC20 Token and a Token Vendor 
 - Each challenge push to a specify branch.  
 
 ## Setup
-- Init hardhat project: `mkdir hardhat && cd hardhat && npx hardhat`
+- Init hardhat project: 
+```
+mkdir hardhat && \
+cd hardhat && \
+yarn init --yes && \
+yarn add -D hardhat
+```
 
 ```
-npm install hardhat hardhat-deploy @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers # For hardhat framework
-npm install @openzeppelin/contracts # security 
-```
+yarn add -D hardhat-deploy hardhat-deploy-ethers ethers chai chai-ethers mocha @types/chai @types/mocha @types/node typescript ts-node dotenv # For hardhat framework
+yarn add -D @openzeppelin/contracts # security 
 
+```
+- If modify some things, re-run install `yarn install`
   
 ## 🚩 Challenge 1: 🥩 Decentralized Staking App
 **1. Exercise Part 1: Implement the stake() method**
@@ -24,7 +31,9 @@ npm install @openzeppelin/contracts # security
 - when you declare a variable without initializing it, it will be initialized to its default value based on the variable type
 Solidity exposes some utility units like wei, ethers, or time units.  
 
-- Run node: `npx hardhat node`  
-- Run test: `npx hardhat test`  
+- Working dir: `cd hardhat`
+- Run node: `yarn chain`  
+- Run test: `yarn test`  
+- Compile contracts: `yarn compile`  
 - Run frontend: `yarn start`  
 - Using hardhat-deploy to deploy the contracts, an Hardhat Plugin to better manage deployment
