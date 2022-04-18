@@ -1,7 +1,7 @@
 # ERC20-buy-sell-exchange
 The goal of this challenge is to create your own ERC20 Token and a Token Vendor Contract that will handle the sell/buy process of your token exchanging it with ETH sent by the user.
 
-- Following the tutorial, thank Emanuele Ricci: https://dev.to/stermi/how-to-create-an-erc20-token-and-a-solidity-vendor-contract-to-sell-buy-your-own-token-4j1m
+- Following the tutorial, thank Emanuele Ricci: https://dev.to/stermi/scaffold-eth-challenge-1-staking-dapp-4ofb
 
 - Fork the scaffold ETH project at https://github.com/scaffold-eth/scaffold-eth  
 
@@ -37,3 +37,12 @@ Solidity exposes some utility units like wei, ethers, or time units.
 - Compile contracts: `yarn compile`  
 - Run frontend: `yarn start`  
 - Using hardhat-deploy to deploy the contracts, an Hardhat Plugin to better manage deployment
+
+**2. Exercise Part 2: Implement the lock mechanism and withdraw**
+- These conditions are:  
+  - At least 1 ETH needs to be stacked on the Staker Contract  
+  - The 1 ETH stack threshold is reached within a time deadline of 30 seconds  
+- Concepts  
+  - Modifier  
+  - Error handling  
+  - Transfer, send, call ether
