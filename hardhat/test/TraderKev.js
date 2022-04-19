@@ -1,7 +1,7 @@
 const {ethers} = require('hardhat');
 const { expect } = require('chai');
 
-describe('TraderKev', function() {
+xdescribe('TraderKev', function() {
     let instance, owner, user; 
 
     beforeEach( async () => {
@@ -13,14 +13,14 @@ describe('TraderKev', function() {
         instance = await contractFactory.deploy(
             "TraderKev",
             "KEV",
-            1e6
+            ethers.utils.parseEther(1e6)
         );
         await instance.deployed();
     });
 
     describe("ERC20 inhering", async function() {
 
-        xit('Should be exactly Name, Symbol and Total Supply of contract', async function() {
+        it('Should be exactly Name, Symbol and Total Supply of contract', async function() {
 
             const nameExpected = "TraderKev";
             const symbolExpected = "KEV";
