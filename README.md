@@ -24,3 +24,15 @@ yarn add -D @openzeppelin/contracts # security
 - If modify some things, re-run install `yarn install`
   
 ## 🚩 Challenge 2: 🥩 ERC20 and Token Router Contract to buy/sell your own token
+**Exercise Part 1: Create your own ERC20 Token and deploy it!**  
+- Concepts:
+  - OpenZeppelin ERCO20
+  - Ethereum ERC-20 Standard
+  - Inheritance
+  - Shadowing inherited State variables
+
+- Inhering OpenZeppelin ERC20
+- Minting owner token
+- Writing unit tests: 
+  - Checking name, symbol and total supply are exactly.
+  - Checking transfer the token from the owner to a user
