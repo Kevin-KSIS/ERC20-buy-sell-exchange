@@ -1,14 +1,14 @@
 const { expect } = require("chai");
 const { ethers, network } = require("hardhat");
 
-describe("Staking", function () {
+describe("* Staking", function () {
   it("Should deployable the Staking contract", async function () {
     const factory = await ethers.getContractFactory("Staking");
     const ins = await factory.deploy();
     await ins.deployed()
     const [user] = await ethers.getSigners();
 
-    describe("Stake", function() {
+    describe("** Stake", function() {
       it("Should be able staking", async function() {
   
         await ins.stake({
@@ -21,7 +21,7 @@ describe("Staking", function () {
       })
     }),
 
-    describe("Withdraw", function() {
+    describe("\t** Withdraw", function() {
 
       it("Disallowable withdraw because deadline not reached yet", async function() {
         const timeleft = await ins.timeleft();

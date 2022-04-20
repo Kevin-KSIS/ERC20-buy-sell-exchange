@@ -46,3 +46,42 @@ Solidity exposes some utility units like wei, ethers, or time units.
   - Modifier  
   - Error handling  
   - Transfer, send, call ether
+
+## 🚩 Challenge 2: 🥩 ERC20 and Token Router Contract to buy/sell your own token
+**Exercise Part 1: Create your own ERC20 Token and deploy it!**  
+- Concepts:
+  - OpenZeppelin ERCO20
+  - Ethereum ERC-20 Standard
+  - Inheritance
+  - Shadowing inherited State variables
+
+- Inhering OpenZeppelin ERC20  
+- Minting owner token
+- Writing unit tests: 
+  - Checking name, symbol and total supply are exactly.
+  - Checking transfer the token from the owner to a user
+
+**Exercise Part 2: Create a Router Contract**  
+The Router contract will be responsible to _allow users to exchange ETH for our Token_   
+We need to:  
+  - Set a price for our token (1 ETH = 100 Token) (in deployment time or testing)
+  - Implement a payable buyToken() function
+  - Transfer all the Tokens to the Router contract  (in deployment time or testing)
+
+Concepts:  
+  - Events  
+  - Payable functions
+  - Openzeppelin Ownable, ownership
+  - Openzeppelin address utility
+  - Transfer and send token
+
+**Exercise Part 3: Allow the Router to buy back!**  
+The flow that will happen:
+  - The user requests to “approve” the Router contract to transfer tokens from the user’s balance to Router's wallet (this will happen on the Token’s contract). 
+  - When you invoke the approve function you will specify the number of tokens that you want to decide to let the other contract be able to transfer at max.  
+  - The user will invoke a sellTokens function on Router contract that will transfer user’s balance to Router’s balance  
+  - The router's contract will transfer to the user’s wallet an equal amount of ETH
+
+Concepts:
+  - ERC20 function approve
+  - ERC20 function transferFrom
